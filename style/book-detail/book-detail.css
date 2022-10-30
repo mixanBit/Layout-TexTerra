@@ -1,0 +1,304 @@
+.book-detail-container {
+  max-width: 1440px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  padding: 0 0 0 80px;
+  margin: auto;
+}
+@media screen and (max-width: 1024px) {
+  .book-detail-container {
+    padding: 0 0 0 0;
+  }
+}
+
+.sidebar {
+  max-width: 323px;
+  width: 100%;
+  height: calc(100vh - var(--header-height));
+  background-color: var(--sidebar-bg);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+@media screen and (max-width: 1024px) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    z-index: 2;
+    height: calc(100vh + var(--header-height));
+    margin-top: var(--header-height);
+  }
+}
+@media screen and (max-width: 500px) {
+  .sidebar {
+    max-width: 100%;
+  }
+}
+
+.sidebar__hr {
+  width: 2px;
+  height: calc(100vh - var(--header-height));
+  background-color: #212023;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.blackout {
+  width: 0px;
+  height: 0px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
+}
+
+.blackout--active {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.sidebar--active {
+  left: 0 !important;
+}
+
+.sidebar__container {
+  position: fixed;
+  max-width: inherit;
+  width: inherit;
+  background-color: var(--sidebar-bg);
+  padding: 30px 20px 0 0;
+}
+@media screen and (max-width: 1024px) {
+  .sidebar__container {
+    padding: 30px 30px 0 30px;
+  }
+}
+
+.sidebar__preview {
+  border-radius: 10px;
+  max-width: 100%;
+  width: 100%;
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: white;
+  padding: 10px 10px 10px 10px;
+}
+.sidebar__preview img {
+  max-width: 170px;
+  width: 100%;
+}
+
+.sidebar__heading {
+  color: var(--sidebar-heading);
+  margin-top: 24px;
+}
+
+.sidebar__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  grid-gap: 4px;
+  margin-top: 10px;
+}
+
+.sidebar__link-p {
+  color: var(--sidebar-heading);
+}
+.sidebar__link-p a {
+  color: var(--sidebar-heading);
+}
+
+.sidebar__ul {
+  max-height: calc(100vh - var(--header-height) - 300px);
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  grid-gap: 2px;
+  list-style-type: none;
+  overflow-y: auto;
+  margin-top: 30px;
+}
+
+.sidebar__li {
+  border-radius: 8px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  color: var(--sidebar__li-inactive-color);
+  -webkit-transition: 0.1s linear;
+  transition: 0.1s linear;
+  padding: 6px 6px 6px 31px;
+}
+.sidebar__li:hover {
+  background-color: var(--sidebar__li-hover-bg);
+}
+.sidebar__li::before {
+  content: "";
+  border-radius: 100px;
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  top: 7.5px;
+  left: 7px;
+  background-color: var(--sidebar__li-marker-inacive-bg);
+}
+
+.sidebar__li--active {
+  color: var(--sidebar__li-active-color);
+}
+.sidebar__li--active::before {
+  background-color: var(--sidebar__li-marker-active-bg);
+}
+
+.content {
+  width: 100%;
+}
+
+.content__preview {
+  max-width: 100%;
+  max-height: 250px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+  background-image: url(../../img/site-prewie.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.content__container {
+  max-width: 550px;
+  width: 100%;
+  padding: 30px 10px 30px 10px;
+  margin-left: 100px;
+}
+@media screen and (max-width: 1024px) {
+  .content__container {
+    padding: 30px 30px 30px 30px;
+    margin: auto;
+    margin-top: inherit;
+  }
+}
+
+.content__update-date {
+  color: var(--update-date-color);
+}
+
+.content__h1 {
+  color: var(--content__h1);
+  margin-top: 14px;
+}
+
+.content__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  grid-gap: 14px;
+  padding-top: calc(var(--header-height) + 18px);
+}
+
+.content__h2 {
+  color: var(--content__h2);
+}
+
+.content__description {
+  color: var(--content__description);
+}
+
+.content__code {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  grid-gap: 14px;
+}
+
+.code-copy {
+  border-radius: 10px;
+  cursor: pointer;
+  max-width: 40px;
+  width: 100%;
+  -webkit-transition: 0.1s linear;
+  transition: 0.1s linear;
+  padding: 5px 5px 5px 5px;
+}
+.code-copy:hover {
+  background-color: var(--copy-hover-bg);
+}
+.code-copy img {
+  width: 100%;
+}
+
+pre {
+  max-width: 500px;
+  width: 100%;
+  padding: 0 30px 0 30px;
+}
+
+.notification-code-copy {
+  border: 1px solid green;
+  border-radius: 10px;
+  width: 180px;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  left: 25px;
+  bottom: -50px;
+  color: #ffffff;
+  background-color: #232323;
+  -webkit-transition: 0.15s linear;
+  transition: 0.15s linear;
+}
+
+.notification-code-copy--active {
+  bottom: 25px;
+}

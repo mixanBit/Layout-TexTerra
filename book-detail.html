@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book-detail</title>
+  <link rel="stylesheet" href="style/global/style.css">
+  <link rel="stylesheet" href="style/preloader/preloader.css">
+  <link rel="stylesheet" href="style/scroll/scroll.css">
+  <link rel="stylesheet" href="style/book-detail/book-detail.css">
+  <link rel="stylesheet" href="style/code/code.css">
+
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script defer src="scripts/preloader/preloader.js"></script>
+  <script defer src="scripts/scrolling/scrolling.js"></script>
+  <script defer src="scripts/sidebar/sidebar.js"></script>
+  <script defer src="scripts/sidebar/sidebar-li.js"></script>
+  <script defer src="scripts/code/code.js"></script>
+  <script defer src="scripts/code/copy-code.js"></script>
+</head>
+<body>
+
+  <div class="preloader" data-preloader="preloader">
+    <div class="loader"></div>
+  </div>
+
+  <header class="header">
+    <div class="header__container">
+      <div class="header__container-menu">
+        <a class="header__logo" href="#">
+          <img src="img/logo.svg" alt="">
+        </a>
+        <button class="sidebar-btn" data-sidebar="btn">
+          <img src="img/burger-menu.svg" alt="">
+        </button>
+        <a class="header__back" href="#">
+          <img src="img/arrow-back.svg" alt="">
+          <p class="book-p book-p--back"><strong>Назад</strong></p>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <section class="book-detail-container">
+    <!-- Затемнение когда выезжает 'sidebar' -->
+    <div class="blackout" data-blackout="bakground"></div>
+
+    <div class="sidebar" data-sidebar="container">
+      <div class="sidebar__container">
+        <div class="sidebar__hr"></div>
+        <div class="sidebar__preview">
+          <img src="img/test.png" alt="">
+        </div>
+        <div class="sidebar__heading book-p"><strong>Itelon</strong></div>
+        <div class="sidebar__link">
+          <div class="sidebar__link-p book-p">Сайт: <a href="#" target="_blank">https://itelon.ru/</a></div>
+          <div class="sidebar__link-p book-p">Админка: <a href="#" target="_blank">https://itelon.ru/bitrix</a></div>
+        </div>
+        <ul class="sidebar__ul">
+          <a href="#test-link1" class="sidebar__li book-li" data-sidebar="li">Изображение</a>
+          <a href="#test-link2" class="sidebar__li book-li" data-sidebar="li">Таблица</a>
+          <a href="#test-link3" class="sidebar__li book-li" data-sidebar="li">Цитата</a>
+          <a href="#test-link4" class="sidebar__li book-li" data-sidebar="li">Видео</a>
+        </ul>
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="content__preview"></div>
+      <div class="content__container">
+        <p class="content__update-date book-p">Последнее обновление: 22.10.2022</p>
+        <h1 class="content__h1 book-h1">Itelon</h1>
+        
+        <div class="content__item" id="test-link1">
+          <h2 class="content__h2 book-h2">Изображение</h2>
+          <p class="content__description book-p">Примечание: изображения должны быть размером 640х480</p>
+          <div class="content__code">
+<pre>
+<code class="language-html">
+&lt;header&gt;
+  &lt;h1&gt;Example HTML&lt;/h1&gt;
+&lt;/header&gt;
+&lt;main class=&quot;style&quot;&gt;
+  &lt;p&gt;Some text&lt;/p&gt;
+&lt;/main&gt;  
+</code>
+</pre>
+            <button class="code-copy">
+              <img src="img/copy.svg" alt="">
+            </button>
+            </div>
+        </div>
+        <div class="content__item" id="test-link2">
+          <h2 class="content__h2 book-h2">Таблица</h2>
+          <p class="content__description book-p">Примечание: изображения должны быть размером 640х480</p>
+          <div class="content__code">
+<pre>
+<code class="language-html">
+&lt;script&gt;
+  let hello = document.querySelector('.fff')
+  let example = true;
+
+  function foo(arg) {
+    console.log( "do", arg);
+    arg = example ? true : false;
+    return arg;
+  }
+&lt;/script&gt;
+</code>
+</pre>
+            <button class="code-copy">
+              <img src="img/copy.svg" alt="">
+            </button>
+            </div>
+        </div>
+        <div class="content__item" id="test-link3">
+          <h2 class="content__h2 book-h2">Цитата</h2>
+          <p class="content__description book-p">Примечание: изображения должны быть размером 640х480</p>
+          <div class="content__code">
+<pre>
+<code class="language-html">
+&lt;style&gt;
+  .body{
+    color: #000;
+    background-color: #fff;
+  }
+&lt;/style&gt;
+</code>
+</pre>
+            <button class="code-copy">
+              <img src="img/copy.svg" alt="">
+            </button>
+            </div>
+        </div>
+        <div class="content__item" id="test-link4">
+          <h2 class="content__h2 book-h2">Видео</h2>
+          <p class="content__description book-p">Примечание: изображения должны быть размером 640х480</p>
+          <div class="content__code">
+<pre>
+<code class="language-html">
+&lt;style1231313123&gt;
+  .body{
+    color: #000;
+    background-color: #fff;
+  }
+&lt;/style&gt;
+</code>
+</pre>
+            <button class="code-copy">
+              <img src="img/copy.svg" alt="">
+            </button>
+            </div>
+        </div>
+
+
+
+
+    </div>
+  </section>
+
+  <div class="notification-code-copy" data-notification="code-copy">
+    <p class="book-p">Скопировано!</p>
+  </div>
+
+</body>
+</html>
