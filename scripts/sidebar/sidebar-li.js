@@ -8,5 +8,6 @@ $('[data-sidebar="li"]').each(function() {
     $(this).addClass('sidebar__li--active')
     $('[data-sidebar="container"]').removeClass('sidebar--active')
     $('[data-blackout="bakground"]').removeClass('blackout--active')
+    $('body').css('overflow', 'auto')
   })
 })
