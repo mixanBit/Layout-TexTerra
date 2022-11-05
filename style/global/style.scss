@@ -11,11 +11,16 @@ a{
   text-decoration: none;
 }
 
-button, input, textarea, code, pre{
+button, input, textarea, a, code, pre{
   border: none;
   background: none;
   outline: none;
+    @media (hover: none) and (pointer: coarse) {
+      cursor: none !important;
+    }
 }
+
+
 
 :root{
   // Цвета
@@ -31,10 +36,10 @@ button, input, textarea, code, pre{
   --preloader-line2-bg: #ACACAC;
   --preloader-line3-bg: #414141;
 
-  // header back
+  // Кнопка назад в шапке
   --header__back-hover-bg: #232323;
 
-  // sidebar
+  // Боковая панель
   --sidebar-heading: #FFFFFF;
   --sidebar-bg: #171717;
   --sidebar__li-inactive-color: #414141;
@@ -42,6 +47,7 @@ button, input, textarea, code, pre{
   --sidebar__li-marker-inacive-bg: #414141;
   --sidebar__li-marker-active-bg: #2DA55F;
   --sidebar__li-hover-bg: #232323;
+  --sidebar__hr-bg: #212023;
 
   // content
   --update-date-color: #414141;
@@ -49,13 +55,16 @@ button, input, textarea, code, pre{
   --content__h2: #FFFFFF;
   --content__description: #BCBCBC;
 
-  // copy button
+  // Кнопка копирования кода
   --copy-hover-bg: #232323;
 
-  // scroll
+  // Скролл
   --scroll-fon-bg: rgba(0,0,0,0);
   --scroll-tumb-bg: #414141;
   --scroll-tumb-hover-bg: #BCBCBC;
+
+  // Уведомление при копировании
+  --notification-code-copy-bg: #232323;
 
   // Разметка
   --header-height: 52px;

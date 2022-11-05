@@ -11,10 +11,15 @@ a {
   text-decoration: none;
 }
 
-button, input, textarea, code, pre {
+button, input, textarea, a, code, pre {
   border: none;
   background: none;
   outline: none;
+}
+@media (hover: none) and (pointer: coarse) {
+  button, input, textarea, a, code, pre {
+    cursor: none !important;
+  }
 }
 
 :root {
@@ -35,6 +40,7 @@ button, input, textarea, code, pre {
   --sidebar__li-marker-inacive-bg: #414141;
   --sidebar__li-marker-active-bg: #2DA55F;
   --sidebar__li-hover-bg: #232323;
+  --sidebar__hr-bg: #212023;
   --update-date-color: #414141;
   --content__h1: #FFFFFF;
   --content__h2: #FFFFFF;
@@ -43,6 +49,7 @@ button, input, textarea, code, pre {
   --scroll-fon-bg: rgba(0,0,0,0);
   --scroll-tumb-bg: #414141;
   --scroll-tumb-hover-bg: #BCBCBC;
+  --notification-code-copy-bg: #232323;
   --header-height: 52px;
 }
 
